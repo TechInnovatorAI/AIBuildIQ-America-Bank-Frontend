@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="w-full mt-[15vh]">
+    <section className="w-full">
       {/* Header Image Section */}
       <div className="relative w-full h-[40vh]">
         <Image
