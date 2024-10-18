@@ -7,7 +7,7 @@ import headerImage from "@/public/assets/header.jpg";
 const Hero = () => {
   return (
     <section 
-      className="relative w-full h-[40vh] bg-gray-900 p-[20] mt-[10vh]"
+      className="relative w-full h-[40vh] bg-gray-900 p-[20] "
     >
       <Image
         src={headerImage.src}
