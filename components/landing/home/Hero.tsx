@@ -32,13 +32,13 @@ const Hero = () => {
           <Box
             width="w-full sm:w-[70vw] md:w-[60vw] lg:w-[50vw] xl:w-[40vw]"
             height="h-auto min-h-[70vh] sm:h-[65vh] md:h-[60vh] lg:h-[55vh]"
-            backgroundColor="bg-[#f2f2f2]"
             letter1="AI-Driven Solutions for Smarter Lending"
             letter2="Revolutionizing how brokers and borrowers seamlessly navigate the lending process with AI-powered precision"
             buttons={[
               { text: "FUNDING REQUEST", variant: "outline" },
               { text: "DISCOVER OUR SERVICES", variant: "default" }
             ]}
+            active=""
           />
         </div>
       </div>

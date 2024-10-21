@@ -9,14 +9,20 @@ const Hero = () => {
     <section className="w-full">
       {/* Header Image Section */}
       <div className="relative w-full h-[40vh]">
-        <Image
-          src={headerImage.src}
-          alt="About Us Header"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          style={{ filter: 'brightness(0.5)' }}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src={headerImage.src}
+            alt="About Us Header"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            style={{ filter: 'brightness(0.5)' }}
+          />
+        </motion.div>
         <div className="absolute inset-0 flex flex-col px-4 sm:px-8 md:px-8 lg:px-12 justify-center text-white w-[50%]">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}

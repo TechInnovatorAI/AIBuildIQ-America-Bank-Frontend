@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import {Box} from "@/components/ui/box";
-import Link from 'next/link';
+
 
 interface SelectProps {
   title: string;
@@ -10,20 +10,14 @@ interface SelectProps {
   backgroundImage: string;
 }
 
-const buttonLetters = [
-  { text: 'Innovator', link: 'innovator', title: 'Innovator', description: 'Innovator description' },
-  { text: 'Services', link: 'services', title: 'Services', description: 'Services description' },
-  { text: 'Products', link: 'products', title: 'Products', description: 'Products description' },
-  { text: 'How It Works', link: 'how-it-works', title: 'How It Works', description: 'How It Works description' },
-  { text: 'About Us', link: 'about-us', title: 'About Us', description: 'About Us description' },
-];
+
 
 const Select: React.FC<SelectProps> = ({ title, description, activeButtonLetter, backgroundImage }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-[5vh] ">
       {/* Top bar */}
-      <div className="bg-gray-100 p-4">
-        <span className="font-bold">{activeButtonLetter}</span>
+      <div className="bg-blue-500 py-4 px-4 sm:px-8 md:px-16 lg:px-24">
+        <span className="font-bold text-white text-[3.2vh]">{activeButtonLetter}</span>
       </div>
 
         <div className="relative">
@@ -46,36 +40,22 @@ const Select: React.FC<SelectProps> = ({ title, description, activeButtonLetter,
             }}
           ></div>
         </div>
-        <div className="absolute inset-0 flex items-end justify-center">
+        <div className="absolute inset-0 px-8 flex items-end justify-center">
           <Box
-            width="w-full sm:w-[70vw] md:w-[60vw] lg:w-[50vw] xl:w-[40vw]"
+            width="w-full sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw]"
             height="h-auto min-h-[30vh] sm:h-[25vh] md:h-[20vh] lg:h-[15vh]"
             letter1={title}
             letter2={description}
             buttons={[
-              { text: 'Appy here', variant: "outline" },
+              { text: 'Appy here', variant: "default" },
             ]}
+            active={activeButtonLetter}
           />
+          
         </div>
+        
         </div>
-
-      {/* Bottom button bar */}
-      <div className="bg-gray-100 w-[100%] p-4 flex justify-center mt-[10vh]">
-        {buttonLetters.map((button) => (
-            <Link href={ `/${button.link}`} key={button.text}>
-                <button
-                    key={button.text}
-                    className={`px-4 py-2 ${
-                    button.text === activeButtonLetter
-                        ? 'border-b-2 border-blue-500'
-                        : ''
-                    }`}
-                >
-                    {button.text}
-                </button>
-            </Link>
-        ))}
-      </div>
+      
     </div>
   );
 };
