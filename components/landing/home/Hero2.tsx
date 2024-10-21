@@ -46,7 +46,6 @@ const Hero = () => {
             <Box
               width=" w-full sm:w-[70vw] md:w-[60vw] lg:w-[50vw] xl:w-[40vw]"
               height="h-auto min-h-[70vh] sm:h-[65vh] md:h-[60vh] lg:h-[55vh]"
-              backgroundColor="bg-[#f2f2f2]"
               letter1="Experience the Future of Real Estate Financing with AIBuildIQ"
               letter2="Whether you're a lender seeking quality leads, a broker looking to close deals faster, or a borrower in search of the best loan, AIBuildIQ is the innovative platform that brings simplicity and precision to real estate financing."
               buttons={[
@@ -54,6 +53,7 @@ const Hero = () => {
                 { text: "BROKERS", variant: "default" },
                 { text: "LENDERS", variant: "default" }
               ]}
+              active=""
             />
           </motion.div>
         </motion.div>
